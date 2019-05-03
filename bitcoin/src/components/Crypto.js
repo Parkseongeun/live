@@ -28,14 +28,15 @@ class Crypto extends Component {
       this.realCrypto[obj[i]] =
         response.data.DISPLAY[obj[i]].KRW.PRICE
       }
-      this.setState({
-        realCrypto: {
-          BTC : PRICE.BTC,
-          ETH : PRICE.ETH
-        }
-      })
     })
     .catch(err => console.log(err))
+    
+    this.setState({
+      realCrypto: {
+        BTC : PRICE.BTC,
+        ETH : PRICE.ETH
+      }
+    })
   }
 
   // fetch(dataRealCrypto)
